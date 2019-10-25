@@ -59,10 +59,11 @@ public class Board {
     }
 
     public Boolean isTie() {
-        if (isInFavorOfX() && isInFavorOfO()) {
+        if (!isInFavorOfX() && !isInFavorOfO()) {
             return true;
+        } else {
+            return false;
         }
-        return false;
     }
     public String getWinner() {
         if(isInFavorOfO()){
